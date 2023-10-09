@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
+import "./styles/Style.css";
 import LoginPage from "./pages/LoginPage";
 import TimeFrame from "./pages/TimeFrame";
 import { token } from "./spotify";
+import Header from "./components/header";
+import Footer from "./components/footer";
 
 
 const App  = () => {
@@ -13,8 +15,12 @@ const App  = () => {
   }, []);
 
   return (
-      <div className="App">
-        {accessToken ? <TimeFrame /> : <LoginPage />}
+      <div>
+        <Header />
+        <div className="center-page">
+          {accessToken ? <TimeFrame /> : <LoginPage />}
+        </div>
+        <Footer />
       </div>
   );
 }
