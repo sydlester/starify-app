@@ -1,20 +1,22 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
+import LoginPage from "./pages/LoginPage";
+import TimeFrame from "./pages/TimeFrame";
+import { token } from "./spotify";
 
-function App() {
-  const [message, setMessage] = useState("");
+
+const App  = () => {
+  const [accessToken, setAccessToken] = useState('');
 
   useEffect(() => {
-    fetch("http://localhost:3001/message")
-      .then((res) => res.json())
-      .then((data) => setMessage(data.message));
+    setAccessToken(token);
   }, []);
 
   return (
-    <div className="App">
-      <h1>{message}</h1>
-    </div>
+      <div className="App">
+        {accessToken ? <TimeFrame /> : <LoginPage />}
+      </div>
   );
 }
 
-export default App
+export default App;
