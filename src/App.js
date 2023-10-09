@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./styles/Style.css";
 import LoginPage from "./pages/LoginPage";
-import TimeFrame from "./pages/TimeFrame";
+import TopTrackList from "./pages/TopTrackList";
 import { token } from "./spotify";
 import Header from "./components/header";
 import Footer from "./components/footer";
@@ -18,7 +18,7 @@ const App  = () => {
       <div>
         <Header />
         <div className="center-page">
-          {accessToken ? <TimeFrame /> : <LoginPage />}
+          {accessToken ? <TopTrackList /> : <LoginPage />}
         </div>
         <Footer />
       </div>

@@ -3,7 +3,7 @@ import "../styles/Style.css";
 import Logo from "../images/Logo.png";
 
 const logoStyle = { 
-    width: "35%",
+    width: "575px",
 };
 
 function Header() {

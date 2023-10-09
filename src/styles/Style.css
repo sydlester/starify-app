@@ -21,6 +21,11 @@ img{
     margin: 1vh;
 }
 
+h2{
+    font-family: "PressStart2p";
+    color: white;
+}
+
 p{
     font-family: "PressStart2p";
     color: white;
@@ -52,6 +57,12 @@ p{
     0% { color: rgb(239, 0, 192); }
     50% { color: rgb(242, 255, 54); }
     100%  { color: rgb(239, 0, 192); }
+}
+
+.time-button{
+    font-family: "PressStart2p";
+    font-size: 4vh;
+    color: rgb(239, 0, 192);
 }
   
 .score {

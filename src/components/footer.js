@@ -3,7 +3,7 @@ import "../styles/Style.css";
 import Ships from "../images/Ships.png";
 
 const imgStyle = { 
-    width: "15%",
+    width: "248px",
 };
 
 function Footer() {

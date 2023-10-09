@@ -62,3 +62,24 @@ export const logout = () => {
   window.localStorage.removeItem('spotify_refresh_token');
   window.location.reload();
 };
+
+
+const headers = {
+  Authorization: `Bearer ${token}`,
+  'Content-Type': 'application/json',
+};
+
+/**
+ * Get a User's Top Tracks
+ * https://developer.spotify.com/documentation/web-api/reference/personalization/get-users-top-artists-and-tracks/
+ */
+export const getTopTracks30Days = () =>
+  axios.get('https://api.spotify.com/v1/me/top/tracks?limit=50&time_range=short_term', { headers });
+
+export const getTopTracks6Months = () =>
+  axios.get('https://api.spotify.com/v1/me/top/tracks?limit=50&time_range=medium_term', {
+    headers,
+  });
+
+export const getTopTracksAllTime = () =>
+  axios.get('https://api.spotify.com/v1/me/top/tracks?limit=50&time_range=long_term', { headers });
