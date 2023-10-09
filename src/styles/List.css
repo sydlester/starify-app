@@ -3,56 +3,40 @@
     src: url('PressStart2P-Regular.ttf');
 }
 
+.top10tracks{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
 .timeframe{
     color: white;
     font-family: "PressStart2p";
 }
 
 .track__item {
-    display: grid;
-    align-items: center;
-    grid-template-columns: 20px 1fr;
-    grid-gap: var(--spacing-md);
-    padding: var(--spacing-xs);
+    column-count: 4;
     color: white;
     font-family: "PressStart2p";
   }
 
   .track__item__num {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    font-size: var(--fz-md);
-    font-variant-numeric: tabular-nums;
-    overflow: visible;
-  }
-
-  .track__item__title-group {
-    display: flex;
-    align-items: center;
+    display: block;
   }
 
 
   .track__item__name {
-    color: var(--white);
-    font-size: var(--fz-md);
+    display: block;
+  }
+
+  .track__artist__name {
+    display: block;
   }
 
   .track__item__album {
-    display: none;
-
-    @media (min-width: 768px) {
-      display: block;
-      white-space: nowrap;
-    }
+    display: block;
   }
 
   .track__item__duration {
-    display: none;
-
-    @media (min-width: 768px) {
-      display: flex;
-      justify-content: flex-end;
-      font-variant-numeric: tabular-nums;
-    }
+    display: block;
   }

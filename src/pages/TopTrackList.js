@@ -5,10 +5,9 @@ import { catchErrors } from '../util';
 import TrackItem from '../components/TrackItem';
 import Loader from "./Loader";
 import "../styles/List.css";
-//import styled from 'styled-components/macro';
+//import styled from 'styled-components';
 //import theme from '../styles/theme';
 // const { colors } = theme;
-
 
 const TopTrackList = () => {
     const [topTracks, setTopTracks] = useState(null);
@@ -52,7 +51,7 @@ const TopTrackList = () => {
             </btn>
           </div>
         </div>
-        <ul>
+        <ul className='top10tracks'>
           {topTracks ? (
             topTracks.items.map((track, i) => <TrackItem track={track} key={i} />).slice(0, 10)
           ) : (
