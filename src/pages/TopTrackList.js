@@ -48,13 +48,19 @@ const TopTrackList = () => {
         <div>
           <h2>TOP TRACKS</h2>
           <div className='timeframe'>
-            <btn className="time-btn" isActive={activeRange === 'short'} onClick={() => { setRangeData('short')}} style={{color: time('short')? "yellow" : "white"}}>
+            <btn className="time-btn" isActive={activeRange === 'short'} onClick={() => { setRangeData('short')}} 
+            style={{color: (time('short')? "yellow" : "white"), textDecoration: (time('short')? "underline" : "")}}
+            >
               <span>4 WEEKS</span>
             </btn>
-            <btn className="time-btn" isActive={activeRange === 'medium'} onClick={() => setRangeData('medium')} style={{color: time('medium')? "yellow" : "white"}}>
+            <btn className="time-btn" isActive={activeRange === 'medium'} onClick={() => setRangeData('medium')} 
+            style={{color: (time('medium')? "yellow" : "white"), textDecoration: (time('medium')? "underline" : "")}}
+            >
               <span>6 MONTHS</span>
             </btn>
-            <btn className="time-btn" isActive={activeRange === 'long'} onClick={() => setRangeData('long')} style={{color: time('long')? "yellow" : "white"}}>
+            <btn className="time-btn" isActive={activeRange === 'long'} onClick={() => setRangeData('long')} 
+            style={{color: (time('long')? "yellow" : "white"), textDecoration: (time('long')? "underline" : "")}}
+            >
               <span>ALL TIME</span>
             </btn>
           </div>
