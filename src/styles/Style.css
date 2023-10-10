@@ -81,3 +81,17 @@ p{
     left: 1%;
     top: 1%;
 }
+
+.links{
+    font-size: xx-small;
+    font-family: "PressStart2p";
+    color: white;
+    text-decoration: none;
+}
+
+.logout{
+    font-family: "PressStart2p";
+    text-decoration: none;
+    padding: 5px;
+    border-style: solid;
+}

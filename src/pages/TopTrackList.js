@@ -47,7 +47,7 @@ const TopTrackList = () => {
       <div className='center-page'>
         
         <div>
-          <h2>TOP TRACKS</h2>
+          <h2>TRACK LEADERBOARD</h2>
           <div className='timeframe'>
             <btn className="time-btn" isActive={activeRange === 'short'} onClick={() => { setRangeData('short')}} 
             style={{color: (time('short')? "yellow" : "white"), textDecoration: (time('short')? "underline" : "")}}
