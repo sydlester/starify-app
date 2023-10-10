@@ -4,9 +4,9 @@
 }
 
 .top10tracks{
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
 }
 
 .timeframe{
@@ -14,29 +14,46 @@
     font-family: "PressStart2p";
 }
 
+.time-btn{
+    margin-left: 5%;
+}
+
+.time-btn:active{
+    color: yellow;
+}
+
+td,th {
+    padding-left: 5%;
+    padding-top: 1%;
+  }
+
 .track__item {
-    column-count: 4;
     color: white;
     font-family: "PressStart2p";
+    font-size: smaller;
   }
 
   .track__item__num {
-    display: block;
+    padding-left: 0vh;
   }
 
 
   .track__item__name {
-    display: block;
+    width: 50%;
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
   }
 
   .track__artist__name {
-    display: block;
+    width: 40%;
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
   }
 
-  .track__item__album {
-    display: block;
-  }
 
   .track__item__duration {
-    display: block;
+    width: 10%;
+    text-align: right;
   }

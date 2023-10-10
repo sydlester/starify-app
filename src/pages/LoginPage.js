@@ -10,7 +10,7 @@ const LOGIN_URI = "http://localhost:3001/login";
 function LoginPage(){
   return( 
     <div>
-      <div>
+      <div className="center-page">
         <img src={OrangeSprites} alt="Orange Sprites" />
         <br/>
         <a href={ LOGIN_URI } className="login-button">LOG IN WITH SPOTIFY</a>

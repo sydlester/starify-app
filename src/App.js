@@ -17,7 +17,7 @@ const App  = () => {
   return (
       <div>
         <Header />
-        <div className="center-page">
+        <div>
           {accessToken ? <TopTrackList /> : <LoginPage />}
         </div>
         <Footer />

@@ -5,9 +5,6 @@ import { catchErrors } from '../util';
 import TrackItem from '../components/TrackItem';
 import Loader from "./Loader";
 import "../styles/List.css";
-//import styled from 'styled-components';
-//import theme from '../styles/theme';
-// const { colors } = theme;
 
 const TopTrackList = () => {
     const [topTracks, setTopTracks] = useState(null);
@@ -36,28 +33,42 @@ const TopTrackList = () => {
     const setRangeData = range => catchErrors(changeRange(range));
   
     return (
-      <div>
+      <div className='center-page'>
         <div>
           <h2>TOP TRACKS</h2>
           <div className='timeframe'>
-            <btn isActive={activeRange === 'short'} onClick={() => setRangeData('short')}>
+            <btn className="time-btn" isActive={activeRange === 'short'} onClick={() => setRangeData('short')}>
               <span>4 WEEKS</span>
             </btn>
-            <btn isActive={activeRange === 'medium'} onClick={() => setRangeData('medium')}>
+            <btn className="time-btn" isActive={activeRange === 'medium'} onClick={() => setRangeData('medium')}>
               <span>6 MONTHS</span>
             </btn>
-            <btn isActive={activeRange === 'long'} onClick={() => setRangeData('long')}>
+            <btn className="time-btn" isActive={activeRange === 'long'} onClick={() => setRangeData('long')}>
               <span>ALL TIME</span>
             </btn>
           </div>
         </div>
-        <ul className='top10tracks'>
+        <table className='top10tracks'>
+            <tr className='track__item'>
+                {/* <td>
+                RANK
+                </td> */}
+                <th className='track__item__name'>
+                TITLE
+                </th>
+                <th className='track__artist__name'>
+                ARTIST
+                </th>
+                <th className='track__item__duration'>
+                SCORE
+                </th>
+            </tr>
           {topTracks ? (
             topTracks.items.map((track, i) => <TrackItem track={track} key={i} />).slice(0, 10)
           ) : (
             <Loader />
           )}
-        </ul>
+        </table>
       </div>
     );
   };
