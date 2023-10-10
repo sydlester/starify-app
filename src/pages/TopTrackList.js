@@ -45,6 +45,7 @@ const TopTrackList = () => {
 
     return (
       <div className='center-page'>
+        
         <div>
           <h2>TOP TRACKS</h2>
           <div className='timeframe'>

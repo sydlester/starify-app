@@ -5,7 +5,9 @@
 
 /* top 10 tracks table */
 .top10tracks{
-    width: 100%;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
     table-layout: fixed;
     border-collapse: collapse;
 }
@@ -17,12 +19,8 @@
 }
 
 .time-btn{
-    margin-left: 5%;
+    margin-left: 2%;
 }
-
-/* .time-btn:active{
-    color: yellow;
-} */
 
 td,th {
     padding-left: 5%;
