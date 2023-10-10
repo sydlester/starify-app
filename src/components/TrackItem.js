@@ -7,16 +7,14 @@ import { formatDuration } from '../util';
 const TrackItem = ({track}, key) => {
   return (
     <tr className='track__item'>
-        {/* <td className="track__item__num">
-            {track.key + 1}
-        </td> */}
+        <td className="track__item__num">{"#"}</td>
         <td className="track__item__name">
-            {track.name}
+            {track.name.toUpperCase()}
         </td>
         <td className="track__item__name">
             {track.artists.map((artist, key) => (
             <span key={key}>
-            {artist.name}
+            {artist.name.toUpperCase()}
             {key !== track.artists.length - 1 && ", "}
             </span>
             ))}

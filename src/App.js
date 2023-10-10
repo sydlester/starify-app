@@ -17,9 +17,9 @@ const App  = () => {
   return (
       <div>
         <Header />
-        <div>
+        <body>
           {accessToken ? <TopTrackList /> : <LoginPage />}
-        </div>
+        </body>
         <Footer />
       </div>
   );

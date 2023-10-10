@@ -6,6 +6,7 @@ import TrackItem from '../components/TrackItem';
 import Loader from "./Loader";
 import "../styles/List.css";
 
+
 const TopTrackList = () => {
     const [topTracks, setTopTracks] = useState(null);
     const [activeRange, setActiveRange] = useState('short');
@@ -31,28 +32,38 @@ const TopTrackList = () => {
     };
   
     const setRangeData = range => catchErrors(changeRange(range));
-  
+
+    function time(len){
+        if (activeRange===len){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    time('short');
+
     return (
       <div className='center-page'>
         <div>
           <h2>TOP TRACKS</h2>
           <div className='timeframe'>
-            <btn className="time-btn" isActive={activeRange === 'short'} onClick={() => setRangeData('short')}>
+            <btn className="time-btn" isActive={activeRange === 'short'} onClick={() => { setRangeData('short')}} style={{color: time('short')? "yellow" : "white"}}>
               <span>4 WEEKS</span>
             </btn>
-            <btn className="time-btn" isActive={activeRange === 'medium'} onClick={() => setRangeData('medium')}>
+            <btn className="time-btn" isActive={activeRange === 'medium'} onClick={() => setRangeData('medium')} style={{color: time('medium')? "yellow" : "white"}}>
               <span>6 MONTHS</span>
             </btn>
-            <btn className="time-btn" isActive={activeRange === 'long'} onClick={() => setRangeData('long')}>
+            <btn className="time-btn" isActive={activeRange === 'long'} onClick={() => setRangeData('long')} style={{color: time('long')? "yellow" : "white"}}>
               <span>ALL TIME</span>
             </btn>
           </div>
         </div>
         <table className='top10tracks'>
             <tr className='track__item'>
-                {/* <td>
+                <td className='track__item__num'>
                 RANK
-                </td> */}
+                </td>
                 <th className='track__item__name'>
                 TITLE
                 </th>

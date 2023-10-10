@@ -35,3 +35,8 @@ export const formatDuration = (ms) => {
   const seconds = Math.floor((ms % 60000) / 1000);
   return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
 };
+
+export const toAllCaps = (str) => {
+  const cap = str.toUpperCase;
+  return cap;
+}

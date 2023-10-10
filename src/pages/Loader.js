@@ -2,6 +2,6 @@ import React from "react";
 
 
 const Loader = () => (
-    <p>Loading</p>
+    <p>loading...</p>
   );
   export default Loader;

@@ -3,57 +3,85 @@
     src: url('PressStart2P-Regular.ttf');
 }
 
+/* top 10 tracks table */
 .top10tracks{
     width: 100%;
     table-layout: fixed;
     border-collapse: collapse;
 }
 
+/* time frame button bar */
 .timeframe{
-    color: white;
     font-family: "PressStart2p";
+    margin-bottom: 2vh;
 }
 
 .time-btn{
     margin-left: 5%;
 }
 
-.time-btn:active{
+/* .time-btn:active{
     color: yellow;
-}
+} */
 
 td,th {
     padding-left: 5%;
-    padding-top: 1%;
+    padding-top: 2%;
   }
 
+tr:nth-child(2),tr:nth-child(3){
+    color: red;
+}
+
+tr:nth-child(4),tr:nth-child(5){
+    color: rgb(239, 0, 192);
+}
+
+tr:nth-child(6),tr:nth-child(7){
+    color: yellow;
+}
+
+tr:nth-child(8),tr:nth-child(9){
+    color: greenyellow;
+}
+
+tr:nth-child(10),tr:nth-child(11){
+    color: cyan;
+}
+  
+/* table row */
 .track__item {
     color: white;
     font-family: "PressStart2p";
     font-size: smaller;
   }
 
-  .track__item__num {
-    padding-left: 0vh;
-  }
-
-
-  .track__item__name {
-    width: 50%;
+/* should be song rank, NOT IMPLEMENTED YET */
+.track__item__num {
+    width: 10%;
     text-align: left;
-    overflow: hidden;
-    white-space: nowrap;
-  }
+}
 
-  .track__artist__name {
+
+/* song name */
+.track__item__name {
     width: 40%;
     text-align: left;
     overflow: hidden;
     white-space: nowrap;
-  }
+}
 
+/* artist name */
+.track__artist__name {
+    width: 40%;
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+}
 
-  .track__item__duration {
+/* song length */
+.track__item__duration {
     width: 10%;
     text-align: right;
-  }
+    white-space: nowrap;
+}

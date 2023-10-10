@@ -15,6 +15,7 @@ footer {
     bottom:0;
     right:0;
     height: "5%";
+    align-content: center;
 }
 
 img{
@@ -29,6 +30,7 @@ h2{
 p{
     font-family: "PressStart2p";
     color: white;
+    font-size: x-small;
 }
 
 @font-face {
