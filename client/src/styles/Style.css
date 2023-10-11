@@ -1,3 +1,9 @@
+@font-face {
+    font-family: "PressStart2p";
+    src: url('PressStart2P-Regular.ttf');
+}
+
+
 body {
     background-image: url("../images/Background.png");
     text-align: center;
@@ -19,29 +25,28 @@ footer {
     align-items: center;
 }
 
-.foot {
-    display: flex; 
-    align-items: center;
-    justify-content: center;
-}
-
 .links{
     font-size: xx-small;
     font-family: "PressStart2p";
     color: white;
     text-decoration: none;
-    margin-left: 2%;
+    margin-left: 5px;
+}
+/* --------------------------------------------- */
+
+/* ---------------HEADER STYLES----------------- */
+.right{
+    position: absolute;
+    right: 1%;
+    top: 1%;
 }
 
-img{
-    margin: 1vh;
+.left{
+    position: absolute;
+    left: 1%;
+    top: 1%;
 }
-
-h2{
-    font-family: "PressStart2p";
-    color: white;
-    text-align: center;
-}
+/* --------------------------------------------- */
 
 p{
     font-family: "PressStart2p";
@@ -49,29 +54,36 @@ p{
     font-size: x-small;
 }
 
-@font-face {
-    font-family: "PressStart2p";
-    src: url('PressStart2P-Regular.ttf');
+/* ---------------LOGIN STYLES----------------- */
+
+.login-page{
+    justify-content: center;
 }
 
-.center-page{
-    align-content: center;
+.login-sprites{
+    margin: 1%;
 }
 
 .login-button{
-        font-family: "PressStart2p";
-        font-size: 4vh;
-        animation: blink 1.5s step-end infinite; 
-        text-decoration: none;
-        margin: auto;
+    display: block;
+    font-family: "PressStart2p";
+    font-size: 4vh;
+    animation: blink 3s step-end infinite; 
+    text-decoration: none;
+    margin: 1%;
 }
 
 @keyframes blink {
     0% { color: rgb(239, 0, 192); }
-    50% { color: rgb(242, 255, 54); }
+    25% { color: rgb(242, 255, 54); }
+    50% { color: cyan; }
+    75% { color: rgb(242, 255, 54); }
     100%  { color: rgb(239, 0, 192); }
 }
+/* --------------------------------------------- */
 
+
+/* --------------TOP TRACK STYLES--------------- */
 .time-button{
     font-family: "PressStart2p";
     font-size: 4vh;
@@ -85,22 +97,4 @@ p{
     grid-template-columns: 1fr 1fr;
     size: small;
 }
-
-.right{
-    position: absolute;
-    right: 1%;
-    top: 1%;
-}
-
-.left{
-    position: absolute;
-    left: 1%;
-    top: 1%;
-}
-
-.logout{
-    font-family: "PressStart2p";
-    text-decoration: none;
-    padding: 5px;
-    border-style: solid;
-}
+/* --------------------------------------------- */

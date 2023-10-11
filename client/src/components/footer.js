@@ -13,11 +13,11 @@ function Footer() {
         <footer>
             <img style={imgStyle} src={Ships} alt="Ships" />
             <br/>
-            <div className="foot">
+            <div>
                 <a className="links" href='https://github.com/sydlester'>SYDNEY LESTER</a>
-                <p className="links"> | </p>
+                <span className="links"> | </span>
                 <a className="links" href='/'>PRIVACY POLICY</a>
-                <p className="links"> | </p>
+                <span className="links"> | </span>
                 <a className='links' href='/' onClick={logout}>LOG OUT</a>
             </div>
         </footer>

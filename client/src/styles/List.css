@@ -3,83 +3,101 @@
     src: url('PressStart2P-Regular.ttf');
 }
 
-/* top 10 tracks table */
-.top10tracks{
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    table-layout: fixed;
-    border-collapse: collapse;
+/* title */
+h2{
+    font-family: "PressStart2p";
+    color: white;
+    text-align: center;
 }
 
-/* time frame button bar */
+/* ---------------TIMEFRAME BUTTONS----------------- */
+/* button container */
 .timeframe{
     font-family: "PressStart2p";
     margin-bottom: 2vh;
 }
 
 .time-btn{
-    margin-left: 2%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+/* ------------------------------------------------- */
+
+/* ---------------------TABLE----------------------- */
+.top10tracks{
+    width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+    table-layout: fixed;
+    border-collapse: collapse;
 }
 
-td,th {
-    padding-left: 5%;
-    padding-top: 2%;
-  }
-
-tr:nth-child(2),tr:nth-child(3){
-    color: red;
+/* table headers */
+.track-header {
+    color: white;
+    font-family: "PressStart2p";
+    font-size: medium;
 }
 
-tr:nth-child(4),tr:nth-child(5){
-    color: rgb(239, 0, 192);
-}
-
-tr:nth-child(6),tr:nth-child(7){
-    color: yellow;
-}
-
-tr:nth-child(8),tr:nth-child(9){
-    color: greenyellow;
-}
-
-tr:nth-child(10),tr:nth-child(11){
-    color: cyan;
-}
-  
-/* table row */
-.track__item {
+/* table rows */
+.track-item {
     color: white;
     font-family: "PressStart2p";
     font-size: smaller;
-  }
+}
 
-/* should be song rank, NOT IMPLEMENTED YET */
-.track__item__num {
-    width: 10%;
+/* cells */
+td,th {
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 2%;
+}
+
+/* song rank */
+.track-item-num {
     text-align: left;
 }
 
 
 /* song name */
-.track__item__name {
-    width: 40%;
+.track-item-name {
     text-align: left;
     overflow: hidden;
     white-space: nowrap;
 }
 
 /* artist name */
-.track__artist__name {
-    width: 40%;
+.track-artist-name {
     text-align: left;
     overflow: hidden;
     white-space: nowrap;
 }
 
 /* song length */
-.track__item__duration {
-    width: 10%;
+.track-item-duration {
     text-align: right;
     white-space: nowrap;
 }
+/* ------------------------------------------------- */
+
+/* -------------------ROW COLORS-------------------- */
+tr:nth-child(1),tr:nth-child(2){
+    color: rgb(239, 0, 192);
+}
+
+tr:nth-child(3),tr:nth-child(4){
+    color: rgb(255, 135, 17);
+}
+
+tr:nth-child(5),tr:nth-child(6){
+    color: yellow;
+}
+
+tr:nth-child(7),tr:nth-child(8){
+    color: greenyellow;
+}
+
+tr:nth-child(9),tr:nth-child(10){
+    color: cyan;
+}
+/* ------------------------------------------------- */

@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import {getTopTracks30Days, getTopTracks6Months, getTopTracksAllTime} from "../spotify"; 
-import "../styles/Style.css";
-import { catchErrors } from '../util';
 import Loader from "./Loader";
-import "../styles/List.css";
-import { formatDuration, formatRank } from '../util';
 
+import {getTopTracks30Days, getTopTracks6Months, getTopTracksAllTime} from "../spotify"; 
+import { formatDuration, formatRank, catchErrors } from '../util';
+
+import "../styles/List.css";
 
 const TopTrackList = () => {
     const [topTracks, setTopTracks] = useState(null);
@@ -44,8 +43,7 @@ const TopTrackList = () => {
     time('short');
 
     return (
-      <div className='center-page'>
-        
+      <div>
         <div>
           <h2>- TRACK LEADERBOARD -</h2>
           <div className='timeframe'>
@@ -67,46 +65,38 @@ const TopTrackList = () => {
           </div>
         </div>
         <table className='top10tracks'>
-            <tr className='track__item'>
-                <th className='track__item__num'>
-                RANK
-                </th>
-                <th className='track__item__name'>
-                TITLE
-                </th>
-                <th className='track__artist__name'>
-                ARTIST
-                </th>
-                <th className='track__item__duration'>
-                SCORE
-                </th>
-            </tr>
-          {topTracks ? (
-            // topTracks.items.map((track, i) => <TrackItem track={track} key={i} />).slice(0, 10)
-
-            topTracks.items.map((track, i) => 
-                <tr className='track__item'>
-                    <td className="track__item__num">{"NO." + formatRank(i+1)}</td>
-                    <td className="track__item__name">
-                        {track.name.toUpperCase()}
-                    </td>
-                    <td className="track__item__name">
-                        {track.artists.map((artist, i) => (
-                        <span key={i}>
-                        {artist.name.toUpperCase()}
-                        {i !== track.artists.length - 1 && ", "}
-                        </span>
-                        ))}
-                    </td>
-                    <td className="track__item__duration">
-                        {formatDuration(track.duration_ms)}
-                    </td>
-                </tr>
-              ).slice(0,10)
-
-          ) : (
-            <Loader />
-          )}
+          <colgroup>
+            <col width="10%"/>
+            <col width="40%"/>
+            <col width="40%"/>
+            <col width="10%"/>
+          </colgroup>
+            <thead className='track-header'>
+                <th className='track-item-num'>RANK</th>
+                <th className='track-item-name'>TITLE</th>
+                <th className='track-artist-name'>ARTIST</th>
+                <th className='track-item-duration'></th>
+            </thead>
+          <tbody>
+            {topTracks ? (
+              topTracks.items.map((track, i) => 
+                  <tr className='track-item'>
+                      <td className="track-item-num">{"NO." + formatRank(i+1)}</td>
+                      <td className="track-item-name">{track.name.toUpperCase()}</td>
+                      <td className="track-item-name">
+                          {track.artists.map((artist, i) => (
+                          <span key={i}>
+                          {artist.name.toUpperCase()}
+                          {i !== track.artists.length - 1 && ", "}
+                          </span>
+                          ))}
+                      </td>
+                      <td className="track-item-duration">{formatDuration(track.duration_ms)}</td>
+                  </tr>).slice(0,10)
+            ) : 
+            (<Loader />)
+            }
+          </tbody>
         </table>
       </div>
     );
