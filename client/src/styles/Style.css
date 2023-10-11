@@ -15,7 +15,21 @@ footer {
     bottom:0;
     right:0;
     height: "5%";
-    align-content: center;
+    align-items: center;
+}
+
+.foot {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.links{
+    font-size: xx-small;
+    font-family: "PressStart2p";
+    color: white;
+    text-decoration: none;
+    margin-left: 2%;
 }
 
 img{
@@ -80,13 +94,6 @@ p{
     position: absolute;
     left: 1%;
     top: 1%;
-}
-
-.links{
-    font-size: xx-small;
-    font-family: "PressStart2p";
-    color: white;
-    text-decoration: none;
 }
 
 .logout{

@@ -68,9 +68,9 @@ const TopTrackList = () => {
         </div>
         <table className='top10tracks'>
             <tr className='track__item'>
-                <td className='track__item__num'>
+                <th className='track__item__num'>
                 RANK
-                </td>
+                </th>
                 <th className='track__item__name'>
                 TITLE
                 </th>
