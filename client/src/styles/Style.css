@@ -1,0 +1,97 @@
+body {
+    background-image: url("../images/Background.png");
+    text-align: center;
+    height: "100%";
+    }
+  
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+    }
+
+footer {
+    position: absolute;
+    left:0;
+    bottom:0;
+    right:0;
+    height: "5%";
+    align-content: center;
+}
+
+img{
+    margin: 1vh;
+}
+
+h2{
+    font-family: "PressStart2p";
+    color: white;
+}
+
+p{
+    font-family: "PressStart2p";
+    color: white;
+    font-size: x-small;
+}
+
+@font-face {
+    font-family: "PressStart2p";
+    src: url('PressStart2P-Regular.ttf');
+}
+
+.center-page{
+    align-content: center;
+}
+
+.login-button{
+        font-family: "PressStart2p";
+        font-size: 4vh;
+        animation: blink 1.5s step-end infinite; 
+        text-decoration: none;
+        margin: auto;
+}
+
+@keyframes blink {
+    0% { color: rgb(239, 0, 192); }
+    50% { color: rgb(242, 255, 54); }
+    100%  { color: rgb(239, 0, 192); }
+}
+
+.time-button{
+    font-family: "PressStart2p";
+    font-size: 4vh;
+    color: rgb(239, 0, 192);
+}
+  
+.score {
+    color: rgb(239, 0, 192);
+    font-family: "PressStart2p";
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 4vh;
+}
+
+.right{
+    position: absolute;
+    right: 1%;
+    top: 1%;
+}
+
+.left{
+    position: absolute;
+    left: 1%;
+    top: 1%;
+}
+
+.links{
+    font-size: xx-small;
+    font-family: "PressStart2p";
+    color: white;
+    text-decoration: none;
+}
+
+.logout{
+    font-family: "PressStart2p";
+    text-decoration: none;
+    padding: 5px;
+    border-style: solid;
+}
