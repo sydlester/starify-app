@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import {getTopTracks30Days, getTopTracks6Months, getTopTracksAllTime} from "../spotify"; 
 import "../styles/Style.css";
 import { catchErrors } from '../util';
-import TrackItem from '../components/TrackItem';
 import Loader from "./Loader";
 import "../styles/List.css";
+import { formatDuration } from '../util';
 
 
 const TopTrackList = () => {
@@ -82,7 +82,28 @@ const TopTrackList = () => {
                 </th>
             </tr>
           {topTracks ? (
-            topTracks.items.map((track, i) => <TrackItem track={track} key={i} />).slice(0, 10)
+            // topTracks.items.map((track, i) => <TrackItem track={track} key={i} />).slice(0, 10)
+
+            topTracks.items.map((track, i) => 
+                <tr className='track__item'>
+                    <td className="track__item__num">{i+1}</td>
+                    <td className="track__item__name">
+                        {track.name.toUpperCase()}
+                    </td>
+                    <td className="track__item__name">
+                        {track.artists.map((artist, i) => (
+                        <span key={i}>
+                        {artist.name.toUpperCase()}
+                        {i !== track.artists.length - 1 && ", "}
+                        </span>
+                        ))}
+                    </td>
+                    <td className="track__item__duration">
+                        {formatDuration(track.duration_ms)}
+                    </td>
+                </tr>
+              ).slice(0,10)
+
           ) : (
             <Loader />
           )}

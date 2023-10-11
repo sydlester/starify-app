@@ -1,7 +1,7 @@
 body {
     background-image: url("../images/Background.png");
     text-align: center;
-    height: "100%";
+    min-height: "100%";
     }
   
 code {
@@ -9,6 +9,7 @@ code {
     monospace;
     }
 
+/* ---------------FOOTER STYLES----------------- */
 footer {
     position: absolute;
     left:0;
@@ -39,6 +40,7 @@ img{
 h2{
     font-family: "PressStart2p";
     color: white;
+    text-align: center;
 }
 
 p{
@@ -81,7 +83,7 @@ p{
     font-family: "PressStart2p";
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 4vh;
+    size: small;
 }
 
 .right{
