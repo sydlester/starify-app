@@ -4,7 +4,7 @@ import "../styles/Style.css";
 import { catchErrors } from '../util';
 import Loader from "./Loader";
 import "../styles/List.css";
-import { formatDuration } from '../util';
+import { formatDuration, formatRank } from '../util';
 
 
 const TopTrackList = () => {
@@ -47,7 +47,7 @@ const TopTrackList = () => {
       <div className='center-page'>
         
         <div>
-          <h2>TRACK LEADERBOARD</h2>
+          <h2>- TRACK LEADERBOARD -</h2>
           <div className='timeframe'>
             <btn className="time-btn" isActive={activeRange === 'short'} onClick={() => { setRangeData('short')}} 
             style={{color: (time('short')? "yellow" : "white"), textDecoration: (time('short')? "underline" : "")}}
@@ -86,7 +86,7 @@ const TopTrackList = () => {
 
             topTracks.items.map((track, i) => 
                 <tr className='track__item'>
-                    <td className="track__item__num">{i+1}</td>
+                    <td className="track__item__num">{"NO." + formatRank(i+1)}</td>
                     <td className="track__item__name">
                         {track.name.toUpperCase()}
                     </td>

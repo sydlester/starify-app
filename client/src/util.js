@@ -33,10 +33,22 @@ export const catchErrors = (fn) => {
 export const formatDuration = (ms) => {
   const minutes = Math.floor(ms / 60000);
   const seconds = Math.floor((ms % 60000) / 1000);
-  return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+  if(minutes < 10){
+    return `0${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+  } else {
+    return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+  }
 };
 
 export const toAllCaps = (str) => {
   const cap = str.toUpperCase;
   return cap;
+}
+
+export const formatRank = (num) =>{
+  if (num < 10){ 
+    return 0 + "" + num;
+  } else {
+    return num;
+  }
 }
