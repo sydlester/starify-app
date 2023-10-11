@@ -35,24 +35,12 @@ footer {
 /* --------------------------------------------- */
 
 /* ---------------HEADER STYLES----------------- */
-.right{
-    position: absolute;
-    right: 1%;
-    top: 1%;
+
+.logo{
+    width: 450px
 }
 
-.left{
-    position: absolute;
-    left: 1%;
-    top: 1%;
-}
 /* --------------------------------------------- */
-
-p{
-    font-family: "PressStart2p";
-    color: white;
-    font-size: x-small;
-}
 
 /* ---------------LOGIN STYLES----------------- */
 
@@ -79,22 +67,5 @@ p{
     50% { color: cyan; }
     75% { color: rgb(242, 255, 54); }
     100%  { color: rgb(239, 0, 192); }
-}
-/* --------------------------------------------- */
-
-
-/* --------------TOP TRACK STYLES--------------- */
-.time-button{
-    font-family: "PressStart2p";
-    font-size: 4vh;
-    color: rgb(239, 0, 192);
-}
-  
-.score {
-    color: rgb(239, 0, 192);
-    font-family: "PressStart2p";
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    size: small;
 }
 /* --------------------------------------------- */

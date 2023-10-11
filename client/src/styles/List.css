@@ -10,11 +10,18 @@ h2{
     text-align: center;
 }
 
+/* loader */
+.load{
+    color: white;
+    font-family: "PressStart2p";
+
+}
+
 /* ---------------TIMEFRAME BUTTONS----------------- */
 /* button container */
 .timeframe{
     font-family: "PressStart2p";
-    margin-bottom: 2vh;
+    margin-bottom: 1%;
 }
 
 .time-btn{
@@ -43,7 +50,7 @@ h2{
 .track-item {
     color: white;
     font-family: "PressStart2p";
-    font-size: smaller;
+    font-size: medium;
 }
 
 /* cells */

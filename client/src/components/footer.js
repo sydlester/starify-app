@@ -16,7 +16,7 @@ function Footer() {
             <div>
                 <a className="links" href='https://github.com/sydlester'>SYDNEY LESTER</a>
                 <span className="links"> | </span>
-                <a className="links" href='/'>PRIVACY POLICY</a>
+                <a className="links" href='https://www.spotify.com/nz/legal/privacy-policy/'>PRIVACY POLICY</a>
                 <span className="links"> | </span>
                 <a className='links' href='/' onClick={logout}>LOG OUT</a>
             </div>

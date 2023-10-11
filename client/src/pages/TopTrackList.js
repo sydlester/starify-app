@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Loader from "./Loader";
 
 import {getTopTracks30Days, getTopTracks6Months, getTopTracksAllTime} from "../spotify"; 
 import { formatDuration, formatRank, catchErrors } from '../util';
@@ -67,15 +66,15 @@ const TopTrackList = () => {
         <table className='top10tracks'>
           <colgroup>
             <col width="10%"/>
-            <col width="40%"/>
-            <col width="40%"/>
+            <col width="50%"/>
+            <col width="30%"/>
             <col width="10%"/>
           </colgroup>
             <thead className='track-header'>
                 <th className='track-item-num'>RANK</th>
                 <th className='track-item-name'>TITLE</th>
                 <th className='track-artist-name'>ARTIST</th>
-                <th className='track-item-duration'></th>
+                <th className='track-item-duration'>SCORE</th>
             </thead>
           <tbody>
             {topTracks ? (
@@ -94,7 +93,7 @@ const TopTrackList = () => {
                       <td className="track-item-duration">{formatDuration(track.duration_ms)}</td>
                   </tr>).slice(0,10)
             ) : 
-            (<Loader />)
+            (<span className='load'>loading...</span>)
             }
           </tbody>
         </table>
