@@ -66,8 +66,8 @@ const TopTrackList = () => {
         <table className='top10tracks'>
           <colgroup>
             <col width="10%"/>
-            <col width="50%"/>
-            <col width="30%"/>
+            <col width="40%"/>
+            <col width="40%"/>
             <col width="10%"/>
           </colgroup>
             <thead className='track-header'>
