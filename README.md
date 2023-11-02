@@ -1,4 +1,4 @@
-# Starify
+# Starify 💫
 <strong>Still in development!</strong> Starify will be deployed after UI is updated for mobile devices.
 
 <p>
